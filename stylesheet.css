@@ -1,0 +1,124 @@
+/* Site Stylesheet
+  1. Global Styles
+  2. Typography Styles
+  3. Structure Styles
+  4. Module Styles
+  5. Component Styles
+  6. Animation Styles
+======================================== */
+
+/* 1. Global Styles
+======================================== */
+
+body {
+  background-color: hsla(207, 95%, 8%, 1);
+  text-align: center;
+  padding-top: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+/* 2. Typography Styles
+======================================== */
+
+.name {
+  color: hsla(207, 95%, 100%, 1);
+  text-shadow: 0px 0px 0px rgba(1,22,39,0);
+  letter-spacing: 12px;
+  position: relative;
+  animation-name: nameAnimation;
+  animation-duration: 8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  font-size: 2rem;
+  font-family: sans-serif;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.profession {
+  color: hsla(87, 95%, 77%, 1);
+  text-shadow: 0px 0px 0px rgba(1,22,39,0);
+  letter-spacing: 12px;
+  position: relative;
+  grid-area: 3 / 2 / 4 / 3;
+  animation-name: professionAnimation;
+  animation-duration: 8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+
+/* 3. Structure Styles
+======================================== */
+
+/* 4. Module Styles
+======================================== */
+
+.top {
+  height: 100%;
+  display: grid;
+  grid-template: 33% 16.5% 16.5% 33% / 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.apps {
+  background-color: hsla(207, 95%, 85%, 1);
+  max-width: 100%;
+  padding: 60px 0px;
+}
+
+
+/* 5. Component Styles
+======================================== */
+
+.ball {
+  background-color: hsla(207, 95%, 31%, 1);
+  height: 200%;
+  /*width: 100%;*/
+  border-radius: 50%;
+  position: relative;
+  grid-area: 1 / 2 / 3 / 3;
+  align-self: center;
+
+  animation-name: ballAnimation2;
+  animation-duration: 6s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+}
+
+/* 6. Animation Styles
+======================================== */
+
+@keyframes nameAnimation {
+  0% { transform: translateX(250%); text-shadow: 0px 0px 0px rgba(1,22,39,0);}
+  33% {  text-shadow: 0px 0px 0px rgba(1,22,39,0);}
+  50% {  text-shadow: 0px 0px 0px rgba(1,22,39,0);}
+  75% {  transform: translateX(0%); text-shadow: 0px 0px 0px rgba(1,22,39,0);}
+  100% {  text-shadow: -3px 5px 4px rgba(1,22,39,0.58);}
+}
+
+@keyframes professionAnimation {
+  0% { transform: translateX(-250%); text-shadow: 0px 0px 0px rgba(1,22,39,0);}
+  33% { text-shadow: 0px 0px 0px rgba(1,22,39,0);}
+  50% {  text-shadow: 0px 0px 0px rgba(1,22,39,0);}
+  75% { transform: translateX(0%); text-shadow: 0px 0px 0px rgba(1,22,39,0);}
+  100% { text-shadow: -3px 5px 4px rgba(1,22,39,0.58);}
+}
+
+@keyframes ballAnimation {
+  0% { top: -200px; width: 9rem; border-radius: 50%; }
+  66% { top: 150px; width: 9rem; border-radius: 50%; }
+  100% { top: 150px; width: 100vw; border-radius: 0%; }
+}
+
+@keyframes ballAnimation2 {
+  0% {transform: translateY(-250%); border-radius: 50%; width: 9rem;}
+  66% {transform: translateY(50%); background-color: hsla(207, 95%, 71%, 1); border-radius: 50%; width: 9rem;}
+  100% { transform: translateY(50%); width: 100vw; border-radius: 0%; }
+}
